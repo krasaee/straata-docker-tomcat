@@ -1,0 +1,13 @@
+FROM straata:tomcat8
+
+WORKDIR $CATALINA_HOME
+
+RUN set -x \
+    && /bin/bash -c 'rm -rf $CATALINA_HOME/webapps/*' \
+    && mkdir -p "$CATALINA_HOME/certs"
+
+COPY "ROOT.war" "$CATALINA_HOME/webapps/ROOT.war"
+COPY "certs/*" "$CATALINA_HOME/certs/"
+COPY "bin/*.sh" "$CATALINA_HOME/bin/"
+COPY "conf/*.xml" "$CATALINA_HOME/conf/"
+COPY "lib/*.jar" "$CATALINA_HOME/lib/"

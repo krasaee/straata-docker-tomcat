@@ -1,0 +1,1 @@
+Add any scripts you need, such as setenv.sh to set the JVM options, e.g. memory, perm, server mode, etc..
