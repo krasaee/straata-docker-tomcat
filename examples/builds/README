@@ -1,0 +1,7 @@
+You will need to have your application source here as specified in the deploy.sh APP_NAME
+
+builds/$APP_NAME
+
+you will also need to have a +x builds/$APP_NAME/build-$ENV.sh where $ENV = test,prod,dev, whatever.
+
+
